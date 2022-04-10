@@ -41,7 +41,7 @@ class EpisodeSort extends SortType {
     sortAlgorithm: EpisodeSort = (a, b) => a.getLastStep().episode - b.getLastStep().episode;
 
     getButtonLabel(run: Episode): string {
-        return `第 ${run.getLastStep().episode} 次嘗試`;
+        return `第 ${run.getLastStep().episode} 次尝试`;
     }
 
 }
