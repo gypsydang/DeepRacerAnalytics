@@ -3,7 +3,7 @@
     <div class="col-5">
 
       <div>
-        <p>顯示數據</p>
+        <p>显示数据</p>
         <div class="pt-1">
           <app-color-button
               (click)="updateChart(data)"
@@ -17,19 +17,19 @@
 
 
       <div class="mt-4">
-        <p>檢視工具</p>
+        <p>检查工具</p>
         <div>
           <app-color-button
               [shouldChangeColor]="true"
               (click)="toggleFromStartFilter()"
               [current]="containsFromStartFilter()">
-            只顯示從頭開始跑的圈數
+            只显示从头开始跑的片段
           </app-color-button>
           <app-color-button
               [shouldChangeColor]="true"
               (click)="toggleOnlyCompleteFilter()"
               [current]="containsOnlyCompleteFilter()">
-            只顯示已完成的圈數
+            只显示已完成的片段
           </app-color-button>
         </div>
       </div>
@@ -37,10 +37,10 @@
 
       <div class="mt-4">
         <p>
-          圈數
-          <span class="text-secondary">(按著 Ctrl | Shift 可多重選取)</span>
+          片段数
+          <span class="text-secondary">(按住 Ctrl | Shift 可多选)</span>
           <span (click)="selectAll()" class="text-primary">
-            點我全選表格中 {{displayService.runsCache.length}} 個數據
+            点我全选表格中的 {{displayService.runsCache.length}} 个片段
           </span>
         </p>
         <div>
@@ -99,12 +99,12 @@
     <div class="col-7">
       <canvas id="chart" style="background-color: white"></canvas>
       <div *ngIf="!trackSupported">
-        <p class="text-center text-danger">此賽道({{racerData.trackName}})暫時沒有邊界資料</p>
+        <p class="text-center text-danger">此赛道({{racerData.trackName}})暂时没有信息</p>
       </div>
       <p class="text-center gray-div text-secondary">{{fileName}}</p>
-      <p [ngClass]="getShowingDataList() ? 'text-right' : 'text-left'">若有任何 Bug、問題或建議，歡迎 <a
+      <p [ngClass]="getShowingDataList() ? 'text-right' : 'text-left'">若有任何 Bug、问题或建议，欢迎 <a
           href="https://github.com/lulu2002/DeepRacerAnalytics/issues/new"
-          target="_blank">點擊這裡</a> 讓我知道！</p>
+          target="_blank">点击这里</a> 让原作者知道！</p>
     </div>
   </div>
 </div>
